@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<jasperReport name="Simple_Report">
+ <style name="Sans_Normal" isDefault="true" fontName="custom" fontSize="14" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+ <detail>
+    <band height="20">
+      <staticText>
+        <reportElement x="180" y="0" width="200" height="20"/>
+        <text><![CDATA[Hello World!]]></text>
+      </staticText>
+    </band>
+  </detail>
+</jasperReport>
