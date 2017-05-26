@@ -1,11 +1,11 @@
 # JasperReportsFont
-English
+##English
 
 forked from tlitvinova.
 
 To crate pdf in Japanese font, I folk it and I change source a littel.
 
-Japanese
+##Japanese
 
 tilivoniaさんのソースをフォーク。
 
