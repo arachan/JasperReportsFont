@@ -22,7 +22,7 @@ public class Main {
 
     public static void main(String[] args) throws JRException {
         final JasperReport report = JasperCompileManager.compileReport(Main.class.getResourceAsStream("/templates/test.jrxml"));
-        JasperPrint print = JasperFillManager.fillReport(report, new HashMap<String, Object>(), new JREmptyDataSource());
+        JasperPrint print = JasperFillManager.fillReport(report, new HashMap<>(), new JREmptyDataSource());
         JasperExportManager.exportReportToPdfFile(print, "report.pdf");
     }
 
