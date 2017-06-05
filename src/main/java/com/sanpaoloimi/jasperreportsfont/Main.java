@@ -5,6 +5,8 @@
  */
 package com.sanpaoloimi.jasperreportsfont;
 
+import java.io.IOException;
+import java.net.URL;
 import java.util.HashMap;
 import net.sf.jasperreports.engine.JREmptyDataSource;
 import net.sf.jasperreports.engine.JRException;
@@ -20,8 +22,11 @@ import net.sf.jasperreports.engine.JasperReport;
  */
 public class Main {
 
-    public static void main(String[] args) throws JRException {
-        final JasperReport report = JasperCompileManager.compileReport(Main.class.getResourceAsStream("/templates/test.jrxml"));
+    public static void main(String[] args) throws JRException, IOException {
+        URL url=Main.class.getResource("/templates/test.jrxml");
+        System.out.println(url.getPath());
+        //final JasperReport report = JasperCompileManager.compileReport(Main.class.getResourceAsStream("/templates/test.jrxml"));
+        final JasperReport report = JasperCompileManager.compileReport(url.openStream());
         JasperPrint print = JasperFillManager.fillReport(report, new HashMap<>(), new JREmptyDataSource());
         JasperExportManager.exportReportToPdfFile(print, "report.pdf");
     }
